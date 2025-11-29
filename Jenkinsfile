@@ -92,7 +92,7 @@ environment {
       // Generate fresh kubeconfig that contains a valid IAM token
             sh '''
               aws eks update-kubeconfig \
-                --name kubernetes-cluster \
+                --name sairam \
                 --region us-east-1
             '''
 
