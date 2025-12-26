@@ -8,7 +8,7 @@ pipeline {
         }
     }
 environment {
-    PATH = "/opt/apache-maven-3.9.11/bin:$PATH"
+    PATH = "/opt/apache-maven-3.9.9/bin:$PATH"
     (SONAR_TOKEN = credentials('SONAR_TOKEN'))
     
 }
@@ -33,8 +33,8 @@ environment {
                     // Run SonarQube analysis
                     sh """
                     mvn verify org.sonarsource.scanner.maven:sonar-maven-plugin:3.9.1.2184:sonar \
-                    -Dsonar.projectKey=taxi-app001_taxi \
-                    -Dsonar.organization=taxi-app001 \
+                    -Dsonar.projectKey=taxi-app005_taxi \
+                    -Dsonar.organization=taxi-app005 \
                     -Dsonar.host.url=https://sonarcloud.io \
                     -Dsonar.token=${SONAR_TOKEN}
                     """
